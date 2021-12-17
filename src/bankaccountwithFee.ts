@@ -11,5 +11,5 @@ let chase:BankAccountWithFee = new BankAccountWithFee(400, 5);
 
 console.log(chase.balance);
 console.log(chase.interestRate);
-console.log(chase.applyFee());
+chase.applyFee();
 console.log(chase.balance);

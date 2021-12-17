@@ -1,21 +1,18 @@
 class BankAccount {
     balance: number;
     interestRate: number;
-    
-    addInterest(): void{}
+    constructor(balance: number, interestRate: number){
+        this.balance = balance;
+        this.interestRate = interestRate;
+    }
+    addInterest(): void{
+        this.balance = this.balance * ( 1 * this.interestRate);
+    }
 }
 
-class BankAccountWithFee extends BankAccount {
-    fee: number;
-    applyFee():void{};
-}
 
-let chase:BankAccountWithFee = new BankAccountWithFee();
-
-console.log(chase.balance);
-console.log(chase.interestRate);
-console.log(chase.applyFee());
-
-let pnc: BankAccount = new BankAccount();
+let pnc: BankAccount = new BankAccount(5000, 2);
 
 pnc.addInterest();
+
+export default BankAccount;
